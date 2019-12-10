@@ -38,11 +38,11 @@ public class Estudiante implements Serializable {
     private String nombre;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idEstudiante")
     private Collection<CursoXEstudiante> cursoXEstudianteCollection;
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "estudiante1")
-    private Estudiante estudiante;
-    @JoinColumn(name = "id", referencedColumnName = "id", insertable = false, updatable = false)
-    @OneToOne(optional = false)
-    private Estudiante estudiante1;
+   // @OneToOne(cascade = CascadeType.ALL, mappedBy = "estudiante1")
+   // private Estudiante estudiante;
+   // @JoinColumn(name = "id", referencedColumnName = "id", insertable = false, updatable = false)
+   // @OneToOne(optional = false)
+   // private Estudiante estudiante1;
 
     public Estudiante() {
     }
@@ -75,21 +75,21 @@ public class Estudiante implements Serializable {
         this.cursoXEstudianteCollection = cursoXEstudianteCollection;
     }
 
-    public Estudiante getEstudiante() {
-        return estudiante;
-    }
-
-    public void setEstudiante(Estudiante estudiante) {
-        this.estudiante = estudiante;
-    }
-
-    public Estudiante getEstudiante1() {
-        return estudiante1;
-    }
-
-    public void setEstudiante1(Estudiante estudiante1) {
-        this.estudiante1 = estudiante1;
-    }
+//    public Estudiante getEstudiante() {
+//        return estudiante;
+//    }
+//
+//    public void setEstudiante(Estudiante estudiante) {
+//        this.estudiante = estudiante;
+//    }
+//
+//    public Estudiante getEstudiante1() {
+//        return estudiante1;
+//    }
+//
+//    public void setEstudiante1(Estudiante estudiante1) {
+//        this.estudiante1 = estudiante1;
+//    }
 
     @Override
     public int hashCode() {

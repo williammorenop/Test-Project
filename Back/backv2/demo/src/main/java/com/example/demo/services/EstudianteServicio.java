@@ -1,4 +1,4 @@
-package com.example.services;
+package com.example.demo.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -13,7 +13,7 @@ public class EstudianteServicio {
 	@Autowired
 	EstudianteRepositorio sampleRepo;
 	
-	@GetMapping ("employees")
+	@GetMapping ("/employees2")
 	Iterable<Estudiante> all(){
 		return sampleRepo.findAll();
 	}
